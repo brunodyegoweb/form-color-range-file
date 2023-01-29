@@ -1,0 +1,72 @@
+/*CSS geral*/
+@charset "UTF-8";
+
+:root {
+    --bkg: #000;
+    --frm-1: radial-gradient(#fff, rgb(0, 89, 255));
+    --frm-2: radial-gradient(#fff, #adff2f);
+    --frm-3: radial-gradient(#fff, #e9967a);
+    --frm-4: radial-gradient(#fff, #8b008b);
+    --fnt: #fff;
+
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    position: relative;
+    background-color: var(--bkg);
+    color: var(--bkg);
+    font-weight: bold;
+    height: 100vh;
+}
+
+main {
+    position: relative;
+    height: 100vh;
+}
+
+form {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--frm-1);
+    padding: 10px 20px;
+    width: 500px;
+    border-radius: 10px;
+}
+
+.button {
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: all 250ms;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.397);
+}
+
+/*Media queries*/
+@media screen and (min-width: 162px) and (max-width:320px) {
+    form {
+        width: 250px;
+        background: var(--frm-2);
+                
+    }
+}
+
+@media screen and (min-width: 321px) and (max-width: 600px) {
+    form {
+        width: 285px;
+        background: var(--frm-3);      
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    form {
+        width: 500px;
+        background: var(--frm-4);      
+    }
+}
